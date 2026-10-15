@@ -1,0 +1,218 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Obsidian Void Foundation -->
+    <linearGradient id="obsidianBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050507"/>
+      <stop offset="55%" stop-color="#07090E"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </linearGradient>
+
+    <!-- Liquid Chrome & Prismatic Chromatic Dispersion Gradients -->
+    <linearGradient id="liquidChromeRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="18%" stop-color="#E2E8F0" stop-opacity="0.85"/>
+      <stop offset="42%" stop-color="#3B82F6" stop-opacity="0.55"/>
+      <stop offset="68%" stop-color="#0F172A" stop-opacity="0.9"/>
+      <stop offset="88%" stop-color="#C8A25A" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#F8FAFC" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <linearGradient id="darkGlassCore" x1="15%" y1="10%" x2="85%" y2="90%">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.45"/>
+      <stop offset="35%" stop-color="#050507" stop-opacity="0.95"/>
+      <stop offset="75%" stop-color="#090D16" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#334155" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <linearGradient id="silaBrass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="45%" stop-color="#C8A25A"/>
+      <stop offset="100%" stop-color="#785A28"/>
+    </linearGradient>
+
+    <radialGradient id="chromaticGlow" cx="72%" cy="50%" r="38%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.14"/>
+      <stop offset="45%" stop-color="#C8A25A" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="specularBloom" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <style>
+      .mono { font-family: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace; }
+      .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      
+      /* 8-State Stepping Text Ticker (4s per step = 32s cycle) */
+      @keyframes stateCycle1 { 0%, 11% { opacity: 1; } 12.5%, 100% { opacity: 0; } }
+      @keyframes stateCycle2 { 0%, 12.4% { opacity: 0; } 12.5%, 23.5% { opacity: 1; } 25%, 100% { opacity: 0; } }
+      @keyframes stateCycle3 { 0%, 24.9% { opacity: 0; } 25%, 36% { opacity: 1; } 37.5%, 100% { opacity: 0; } }
+      @keyframes stateCycle4 { 0%, 37.4% { opacity: 0; } 37.5%, 48.5% { opacity: 1; } 50%, 100% { opacity: 0; } }
+      @keyframes stateCycle5 { 0%, 49.9% { opacity: 0; } 50%, 61% { opacity: 1; } 62.5%, 100% { opacity: 0; } }
+      @keyframes stateCycle6 { 0%, 62.4% { opacity: 0; } 62.5%, 73.5% { opacity: 1; } 75%, 100% { opacity: 0; } }
+      @keyframes stateCycle7 { 0%, 74.9% { opacity: 0; } 75%, 86% { opacity: 1; } 87.5%, 100% { opacity: 0; } }
+      @keyframes stateCycle8 { 0%, 87.4% { opacity: 0; } 87.5%, 98.5% { opacity: 1; } 100% { opacity: 0; } }
+
+      .st1 { animation: stateCycle1 32s infinite; }
+      .st2 { animation: stateCycle2 32s infinite; opacity: 0; }
+      .st3 { animation: stateCycle3 32s infinite; opacity: 0; }
+      .st4 { animation: stateCycle4 32s infinite; opacity: 0; }
+      .st5 { animation: stateCycle5 32s infinite; opacity: 0; }
+      .st6 { animation: stateCycle6 32s infinite; opacity: 0; }
+      .st7 { animation: stateCycle7 32s infinite; opacity: 0; }
+      .st8 { animation: stateCycle8 32s infinite; opacity: 0; }
+
+      @keyframes pulseLock {
+        0%, 100% { opacity: 0.95; }
+        50% { opacity: 0.35; }
+      }
+      .pulse { animation: pulseLock 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    </style>
+  </defs>
+
+  <!-- Foundation Canvas -->
+  <rect width="1200" height="420" rx="12" fill="url(#obsidianBg)" stroke="#1E2430" stroke-width="1.5"/>
+  <rect width="1200" height="420" rx="12" fill="url(#chromaticGlow)"/>
+
+  <!-- Precision Coordinate Graticule & Corner Fiducials -->
+  <g stroke="#161B24" stroke-width="1">
+    <line x1="0" y1="64" x2="1200" y2="64"/>
+    <line x1="0" y1="356" x2="1200" y2="356"/>
+    <line x1="680" y1="0" x2="680" y2="420" stroke-dasharray="4 6"/>
+  </g>
+
+  <!-- Corner PCB Fiducial Marks -->
+  <g stroke="#475569" stroke-width="1.5" fill="none">
+    <path d="M 24 40 L 24 24 L 40 24"/>
+    <path d="M 1176 40 L 1176 24 L 1160 24"/>
+    <path d="M 24 380 L 24 396 L 40 396"/>
+    <path d="M 1176 380 L 1176 396 L 1160 396"/>
+  </g>
+
+  <!-- TOP TELEMETRY HEADER BAR -->
+  <text x="48" y="42" fill="#64748B" font-size="11" letter-spacing="2.5" class="mono">SYS.ARCH // REV: DSL-08 [EIGHT-PHASE ADAPTIVE KERNEL]</text>
+  <circle cx="1018" cy="38" r="3.5" fill="#C8A25A" class="pulse"/>
+  <text x="1030" y="42" fill="#94A3B8" font-size="11" letter-spacing="1.5" class="mono">CHRONOGRAPH: LOCKED</text>
+
+  <!-- ======================================================================= -->
+  <!-- RIGHT SECTOR: LIQUID-CHROME SCULPTURE + 8-NODE ADAPTATION WHEEL         -->
+  <!-- ======================================================================= -->
+  <g transform="translate(935, 210)">
+    <!-- Outer Sculptural Liquid-Glass Fold -->
+    <path d="M -165,-95 C -90,-175 75,-165 145,-80 C 215,5 175,135 85,160 C -5,185 -140,145 -180,55 C -220,-35 -240,-15 -165,-95 Z"
+          fill="url(#darkGlassCore)" stroke="url(#liquidChromeRim)" stroke-width="2.5" filter="url(#specularBloom)"/>
+    
+    <!-- Prismatic Chromatic Aberration Micro-Fringes (Sapphire & Gold Edge Refraction) -->
+    <path d="M -150,-85 C -80,-158 68,-148 132,-70" fill="none" stroke="#3B82F6" stroke-width="1.2" opacity="0.65"/>
+    <path d="M -168,48 C -125,132 -5,172 78,148" fill="none" stroke="#C8A25A" stroke-width="1.2" opacity="0.6"/>
+
+    <!-- Inner Hollow Liquid-Chrome Ribbon -->
+    <path d="M -115,-55 C -55,-125 65,-115 110,-45 C 155,25 115,110 45,125 C -25,140 -105,100 -130,35 C -155,-30 -175,15 -115,-55 Z"
+          fill="#050507" fill-opacity="0.88" stroke="url(#liquidChromeRim)" stroke-width="1.75"/>
+
+    <!-- Specular White-Hot Rim Reflection -->
+    <path d="M -95,-72 C -40,-115 40,-108 88,-58" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" opacity="0.9"/>
+    <path d="M -118,28 C -95,82 -20,118 42,108" fill="none" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round" opacity="0.75"/>
+
+    <!-- Static Outer Calibration Graticule -->
+    <circle cx="0" cy="0" r="134" fill="none" stroke="#1E293B" stroke-width="1" stroke-dasharray="2 6"/>
+    <circle cx="0" cy="0" r="102" fill="none" stroke="#334155" stroke-width="0.75"/>
+
+    <!-- THE 8-SPOKED ADAPTATION WHEEL (Stepping 45 deg every 4 seconds) -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+        values="0;0; 45;45; 90;90; 135;135; 180;180; 225;225; 270;270; 315;315; 360"
+        keyTimes="0;0.11; 0.125;0.235; 0.25;0.36; 0.375;0.485; 0.5;0.61; 0.625;0.735; 0.75;0.86; 0.875;0.985; 1"
+        dur="32s" repeatCount="indefinite"/>
+
+      <!-- Main Octagonal Ring & Inner Hub -->
+      <circle cx="0" cy="0" r="78" fill="none" stroke="url(#silaBrass)" stroke-width="2.2"/>
+      <circle cx="0" cy="0" r="68" fill="none" stroke="#475569" stroke-width="0.75" stroke-dasharray="6 4"/>
+      <circle cx="0" cy="0" r="22" fill="#070A10" stroke="url(#silaBrass)" stroke-width="2"/>
+      <circle cx="0" cy="0" r="6" fill="#C8A25A"/>
+
+      <!-- 8 Precision Spokes (0, 45, 90, 135, 180, 225, 270, 315 deg) -->
+      <g stroke="url(#silaBrass)" stroke-width="1.6">
+        <line x1="0" y1="-94" x2="0" y2="94"/>
+        <line x1="-94" y1="0" x2="94" y2="0"/>
+        <line x1="-66.4" y1="-66.4" x2="66.4" y2="66.4"/>
+        <line x1="-66.4" y1="66.4" x2="66.4" y2="-66.4"/>
+      </g>
+
+      <!-- 8 Outer Sila Nodes (The Signature Silhouette Abstracted) -->
+      <g fill="#0A0D12" stroke="url(#silaBrass)" stroke-width="2">
+        <circle cx="0" cy="-98" r="6.5"/>
+        <circle cx="69.3" cy="-69.3" r="6.5"/>
+        <circle cx="98" cy="0" r="6.5"/>
+        <circle cx="69.3" cy="69.3" r="6.5"/>
+        <circle cx="0" cy="98" r="6.5"/>
+        <circle cx="-69.3" cy="69.3" r="6.5"/>
+        <circle cx="-98" cy="0" r="6.5"/>
+        <circle cx="-69.3" cy="-69.3" r="6.5"/>
+      </g>
+
+      <!-- Inner Node Cores -->
+      <g fill="#FDE68A">
+        <circle cx="0" cy="-98" r="2.2"/>
+        <circle cx="69.3" cy="-69.3" r="2.2"/>
+        <circle cx="98" cy="0" r="2.2"/>
+        <circle cx="69.3" cy="69.3" r="2.2"/>
+        <circle cx="0" cy="98" r="2.2"/>
+        <circle cx="-69.3" cy="69.3" r="2.2"/>
+        <circle cx="-98" cy="0" r="2.2"/>
+        <circle cx="-69.3" cy="-69.3" r="2.2"/>
+      </g>
+    </g>
+
+    <!-- Top Dead Center Index Reticle (Fixed) -->
+    <polygon points="0,-118 -5,-128 5,-128" fill="#C8A25A"/>
+    <text x="0" y="154" text-anchor="middle" fill="#64748B" font-size="9.5" letter-spacing="2" class="mono">PHASE_ENC // 8-STATE STEP</text>
+  </g>
+
+  <!-- ======================================================================= -->
+  <!-- LEFT SECTOR: IDENTITY TYPOGRAPHY & STEPPING HARDWARE REGISTER           -->
+  <!-- ======================================================================= -->
+  <g transform="translate(48, 0)">
+    <!-- Subtle Geometric Emblem & Domain Tag -->
+    <rect x="0" y="96" width="8" height="8" fill="none" stroke="#C8A25A" stroke-width="1.5"/>
+    <text x="18" y="104" fill="#C8A25A" font-size="11" letter-spacing="3" class="mono">EMBEDDED SYSTEMS • ADAPTIVE ARCHITECTURE • SILICON TO EDGE</text>
+
+    <!-- Primary Display Name -->
+    <text x="0" y="168" fill="#F8FAFC" font-size="54" font-weight="800" letter-spacing="4" class="sans">HAMSAVARTN</text>
+
+    <!-- Concise High-Signal Positioning -->
+    <text x="0" y="204" fill="#94A3B8" font-size="15" letter-spacing="0.4" class="sans">
+      Architecting deterministic real-time systems, zero-heap firmware, and fault-adaptive engines.
+    </text>
+
+    <!-- LIVE STEPPING HARDWARE REGISTER BOX (Synced to the 8 Wheel Rotations) -->
+    <rect x="0" y="232" width="585" height="88" rx="6" fill="#090C12" stroke="#1E293B" stroke-width="1.2"/>
+    <line x1="0" y1="260" x2="585" y2="260" stroke="#161E2E" stroke-width="1"/>
+    <rect x="0" y="232" width="3" height="88" fill="#C8A25A"/>
+
+    <text x="16" y="250" fill="#64748B" font-size="10.5" letter-spacing="1.5" class="mono">REG_ADDR: 0x0800_0000 // AUTONOMIC ADAPTATION LOOP</text>
+    <text x="455" y="250" fill="#3B82F6" font-size="10.5" letter-spacing="1" class="mono">Δθ = +45.0° / STEP</text>
+
+    <!-- 8 Cycling Register States -->
+    <g class="mono" font-size="13" fill="#E2E8F0">
+      <text x="16" y="286" class="st1">[STATE 01/08] TARGET: raptor          // ZERO-DEP TASK RUNNER &amp; DAG ENGINE</text>
+      <text x="16" y="286" class="st2">[STATE 02/08] TARGET: JanusGate       // DUAL-FACED AI AGENT FIREWALL</text>
+      <text x="16" y="286" class="st3">[STATE 03/08] TARGET: rtos-edge-gw    // STM32F103 FREE-RTOS (0 B HEAP ALLOC)</text>
+      <text x="16" y="286" class="st4">[STATE 04/08] MEMORY: 100% STATIC     // DETERMINISTIC WCET &amp; STACK ISOLATION</text>
+      <text x="16" y="286" class="st5">[STATE 05/08] FAULT_GUARD: IWDG_ARMED // AUTONOMOUS DISTURBANCE REJECTION</text>
+      <text x="16" y="286" class="st6">[STATE 06/08] SENSOR_BUS: DMA_LOCKED  // MULTI-RATE I2C / SPI / ADC PIPELINE</text>
+      <text x="16" y="286" class="st7">[STATE 07/08] ADAPTIVE_CORE: CONVERGED// CLOSED-LOOP RESIDUAL STATE INFERENCE</text>
+      <text x="16" y="286" class="st8">[STATE 08/08] CYCLE_COMPLETE: 360.0°  // IMMUNITY &amp; SYSTEMIC EQUILIBRIUM LOCKED</text>
+    </g>
+
+    <text x="16" y="307" fill="#64748B" font-size="10.5" letter-spacing="1" class="mono">
+      STATUS: NOMINAL  |  WATCHDOG: ARMED  |  REPOS: raptor • JanusGate • rtos-edge-gateway
+    </text>
+  </g>
+
+  <!-- BOTTOM TELEMETRY FOOTER BAR -->
+  <text x="48" y="382" fill="#475569" font-size="10.5" letter-spacing="2" class="mono">0x0800_FFFF // OBSIDIAN-CHROME TELEMETRY INTERFACE</text>
+  <text x="1152" y="382" text-anchor="end" fill="#64748B" font-size="10.5" letter-spacing="1.5" class="mono">GITHUB.COM/HAMSAVARTN</text>
+</svg>

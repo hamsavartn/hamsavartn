@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 24" width="100%" height="24">
+  <defs>
+    <linearGradient id="mercuryLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#050507" stop-opacity="0"/>
+      <stop offset="15%" stop-color="#1E293B" stop-opacity="0.8"/>
+      <stop offset="38%" stop-color="#3B82F6" stop-opacity="0.65"/>
+      <stop offset="50%" stop-color="#F8FAFC" stop-opacity="0.95"/>
+      <stop offset="62%" stop-color="#C8A25A" stop-opacity="0.75"/>
+      <stop offset="85%" stop-color="#1E293B" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Subtle Horizontal Liquid-Chrome Filament -->
+  <line x1="0" y1="12" x2="1200" y2="12" stroke="url(#mercuryLine)" stroke-width="1.5"/>
+  
+  <!-- Center 8-Point Precision Fiducial Node -->
+  <g transform="translate(600, 12)">
+    <rect x="-5" y="-5" width="10" height="10" fill="#050507" stroke="#C8A25A" stroke-width="1.2"/>
+    <rect x="-5" y="-5" width="10" height="10" fill="#050507" stroke="#E2E8F0" stroke-width="1" transform="rotate(45)"/>
+    <circle cx="0" cy="0" r="2" fill="#C8A25A"/>
+  </g>
+</svg>
