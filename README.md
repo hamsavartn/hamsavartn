@@ -49,7 +49,7 @@ safety, and autonomous disturbance rejection under fault conditions.
       <p><sub><code>REG: 0x0800_0200</code> • <code>SHA: 8C25DD3</code> • <code>2026-10-18</code></sub></p>
       <p>The AI agent firewall: One face watches what enters, one watches what leaves. Defends against prompt injections, exfiltration, and scams with a multi-layer ensemble.</p>
       <blockquote>
-        <sub><strong>🛡️ MCP TRUST AUDIT: 74/100 (GRADE C // EMERGING)</strong><br/>
+        <sub><strong>🛡️ MCP TRUST AUDIT: 74/100 (GRADE C // VERIFIED)</strong><br/>
         Audited by M8VEN • 33 code files verified • 0 concerning findings</sub>
       </blockquote>
       <p><code>Python</code> <code>Dockerfile</code> <code>MCP Firewall</code> <code>M8VEN Verified</code></p>
