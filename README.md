@@ -44,7 +44,7 @@ safety, and autonomous disturbance rejection under fault conditions.
     </td>
     <td width="33%" valign="top">
       <h4><code>[0x02]</code> <a href="https://github.com/hamsavartn/JanusGate"><strong>JanusGate</strong></a></h4>
-      <p><sub><code>REG: 0x0800_0200</code> • <code>SHA: 12266D7</code> • <code>2026-10-12</code></sub></p>
+      <p><sub><code>REG: 0x0800_0200</code> • <code>SHA: 8C25DD3</code> • <code>2026-10-18</code></sub></p>
       <p>The AI agent firewall: One face watches what enters, one watches what leaves. Defends against prompt injections, exfiltration, and scams with a multi-layer ensemble.</p>
       <p><code>Python</code> <code>Dockerfile</code></p>
     </td>
