@@ -38,21 +38,28 @@ safety, and autonomous disturbance rejection under fault conditions.
   <tr>
     <td width="33%" valign="top">
       <h4><code>[0x01]</code> <a href="https://github.com/hamsavartn/raptor"><strong>raptor</strong></a></h4>
+      <p><a href="https://github.com/hamsavartn/raptor"><img src="https://img.shields.io/badge/ENGINE-GO_STDLIB_ZERO--DEP-00ADD8?style=flat-square&amp;logo=go&amp;logoColor=white" alt="Go Task Runner" /></a></p>
       <p><sub><code>REG: 0x0800_0100</code> • <code>SHA: 4004EC0</code> • <code>2026-08-30</code></sub></p>
       <p>A zero-dependency Taskfile v3 task runner built with Go stdlib only. Hand-written YAML parser, DAG scheduler, cycle detection, incremental builds — no require block, no go.sum.</p>
-      <p><code>Go</code> <code>Shell</code></p>
+      <p><code>Go</code> <code>Shell</code> <code>Taskfile v3</code> <code>Zero-Dep</code></p>
     </td>
     <td width="33%" valign="top">
       <h4><code>[0x02]</code> <a href="https://github.com/hamsavartn/JanusGate"><strong>JanusGate</strong></a></h4>
+      <p><a href="https://m8ven.ai/mcp/hamsavartn/janusgate?s=readme"><img src="https://m8ven.ai/badge/mcp/hamsavartn/janusgate" alt="M8ven MCP Trust Score" /></a></p>
       <p><sub><code>REG: 0x0800_0200</code> • <code>SHA: 8C25DD3</code> • <code>2026-10-18</code></sub></p>
       <p>The AI agent firewall: One face watches what enters, one watches what leaves. Defends against prompt injections, exfiltration, and scams with a multi-layer ensemble.</p>
-      <p><code>Python</code> <code>Dockerfile</code></p>
+      <blockquote>
+        <sub><strong>🛡️ MCP TRUST AUDIT: 74/100 (GRADE C // EMERGING)</strong><br/>
+        Audited by M8VEN • 33 code files verified • 0 concerning findings</sub>
+      </blockquote>
+      <p><code>Python</code> <code>Dockerfile</code> <code>MCP Firewall</code> <code>M8VEN Verified</code></p>
     </td>
     <td width="33%" valign="top">
       <h4><code>[0x03]</code> <a href="https://github.com/hamsavartn/rtos-edge-gateway"><strong>rtos-edge-gateway</strong></a></h4>
+      <p><a href="https://github.com/hamsavartn/rtos-edge-gateway"><img src="https://img.shields.io/badge/FIRMWARE-STM32F103_0--HEAP-10B981?style=flat-square&amp;logo=arm&amp;logoColor=white" alt="STM32 FreeRTOS" /></a></p>
       <p><sub><code>REG: 0x0800_0300</code> • <code>SHA: 31998BA</code> • <code>2026-10-06</code></sub></p>
       <p>RTOS-Based Industrial Edge Gateway | STM32F103C8 + FreeRTOS</p>
-      <p><code>C++</code> <code>C</code> <code>Python</code></p>
+      <p><code>C++</code> <code>C</code> <code>Python</code> <code>FreeRTOS</code> <code>0-Heap</code></p>
     </td>
   </tr>
 </table>

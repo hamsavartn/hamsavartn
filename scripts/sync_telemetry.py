@@ -89,9 +89,14 @@ def build_telemetry_svg(records: list) -> str:
         x = xs[idx]
         color = accents[idx % len(accents)]
         title = html.escape(f"0x0{idx+1} // {rec['name']}")
-        sub = html.escape(
-            f"LANG: {rec['primary_lang'].upper()} • SHA: {rec['sha']} • UPD: {rec['date']}"
-        )
+        if rec["name"] == "JanusGate":
+            sub = html.escape(
+                f"LANG: PYTHON • SHA: {rec['sha']} • M8VEN: 74/100 (VERIFIED)"
+            )
+        else:
+            sub = html.escape(
+                f"LANG: {rec['primary_lang'].upper()} • SHA: {rec['sha']} • UPD: {rec['date']}"
+            )
         slots.append(
             f'  <circle cx="{x}" cy="26" r="3.5" fill="{color}"/>\n'
             f'  <text x="{x+12}" y="30" fill="#F1F5F9" font-size="12" font-weight="700" class="mono">{title}</text>\n'
@@ -111,16 +116,59 @@ def build_telemetry_svg(records: list) -> str:
 
 
 def build_readme_cards(records: list) -> str:
+    repo_meta = {
+        "raptor": {
+            "badge_html": (
+                '<a href="https://github.com/hamsavartn/raptor">'
+                '<img src="https://img.shields.io/badge/ENGINE-GO_STDLIB_ZERO--DEP-00ADD8?style=flat-square&amp;logo=go&amp;logoColor=white" alt="Go Task Runner" />'
+                '</a>'
+            ),
+            "callout": "",
+            "extra_tags": ["Taskfile v3", "Zero-Dep"],
+        },
+        "JanusGate": {
+            "badge_html": (
+                '<a href="https://m8ven.ai/mcp/hamsavartn/janusgate?s=readme">'
+                '<img src="https://m8ven.ai/badge/mcp/hamsavartn/janusgate" alt="M8ven MCP Trust Score" />'
+                '</a>'
+            ),
+            "callout": (
+                '      <blockquote>\n'
+                '        <sub><strong>🛡️ MCP TRUST AUDIT: 74/100 (GRADE C // EMERGING)</strong><br/>\n'
+                '        Audited by M8VEN • 33 code files verified • 0 concerning findings</sub>\n'
+                '      </blockquote>\n'
+            ),
+            "extra_tags": ["MCP Firewall", "M8VEN Verified"],
+        },
+        "rtos-edge-gateway": {
+            "badge_html": (
+                '<a href="https://github.com/hamsavartn/rtos-edge-gateway">'
+                '<img src="https://img.shields.io/badge/FIRMWARE-STM32F103_0--HEAP-10B981?style=flat-square&amp;logo=arm&amp;logoColor=white" alt="STM32 FreeRTOS" />'
+                '</a>'
+            ),
+            "callout": "",
+            "extra_tags": ["FreeRTOS", "0-Heap"],
+        },
+    }
+
     cells = []
     for idx, rec in enumerate(records):
         reg_addr = f"0x0800_0{idx+1}00"
+        cfg = repo_meta.get(rec["name"], {})
+        badge_p = f'      <p>{cfg["badge_html"]}</p>\n' if cfg.get("badge_html") else ""
+        callout_html = cfg.get("callout", "")
+
+        tags = rec["langs"] + [t for t in cfg.get("extra_tags", []) if t not in rec["langs"]]
+        badges = " ".join(f"<code>{html.escape(l)}</code>" for l in tags)
         desc = html.escape(rec["description"])
-        badges = " ".join(f"<code>{html.escape(l)}</code>" for l in rec["langs"])
+
         cells.append(
             f'    <td width="33%" valign="top">\n'
             f'      <h4><code>[0x0{idx+1}]</code> <a href="{rec["url"]}"><strong>{html.escape(rec["name"])}</strong></a></h4>\n'
+            f'{badge_p}'
             f'      <p><sub><code>REG: {reg_addr}</code> • <code>SHA: {rec["sha"]}</code> • <code>{rec["date"]}</code></sub></p>\n'
             f'      <p>{desc}</p>\n'
+            f'{callout_html}'
             f'      <p>{badges}</p>\n'
             f'    </td>'
         )

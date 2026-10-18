@@ -198,7 +198,7 @@
     <!-- 8 Cycling Register States -->
     <g class="mono" font-size="13" fill="#E2E8F0">
       <text x="16" y="286" class="st1">[STATE 01/08] TARGET: raptor          // ZERO-DEP TASK RUNNER &amp; DAG ENGINE</text>
-      <text x="16" y="286" class="st2">[STATE 02/08] TARGET: JanusGate       // DUAL-FACED AI AGENT FIREWALL</text>
+      <text x="16" y="286" class="st2">[STATE 02/08] TARGET: JanusGate       // M8VEN VERIFIED // AI AGENT FIREWALL</text>
       <text x="16" y="286" class="st3">[STATE 03/08] TARGET: rtos-edge-gw    // STM32F103 FREE-RTOS (0 B HEAP ALLOC)</text>
       <text x="16" y="286" class="st4">[STATE 04/08] MEMORY: 100% STATIC     // DETERMINISTIC WCET &amp; STACK ISOLATION</text>
       <text x="16" y="286" class="st5">[STATE 05/08] FAULT_GUARD: IWDG_ARMED // AUTONOMOUS DISTURBANCE REJECTION</text>
