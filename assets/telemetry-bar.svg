@@ -10,7 +10,7 @@
   <text x="28" y="52" fill="#94A3B8" font-size="10.5" class="mono">LANG: GO • SHA: 4004EC0 • UPD: 2026-08-30</text>
   <circle cx="428" cy="26" r="3.5" fill="#3B82F6"/>
   <text x="440" y="30" fill="#F1F5F9" font-size="12" font-weight="700" class="mono">0x02 // JanusGate</text>
-  <text x="428" y="52" fill="#94A3B8" font-size="10.5" class="mono">LANG: PYTHON • SHA: 8C25DD3 • M8VEN: 74/100 (VERIFIED)</text>
+  <text x="428" y="52" fill="#94A3B8" font-size="10.5" class="mono">LANG: PYTHON • SHA: 8C25DD3 • M8VEN: 89/100 (VERIFIED)</text>
   <circle cx="828" cy="26" r="3.5" fill="#10B981"/>
   <text x="840" y="30" fill="#F1F5F9" font-size="12" font-weight="700" class="mono">0x03 // rtos-edge-gateway</text>
   <text x="828" y="52" fill="#94A3B8" font-size="10.5" class="mono">LANG: C++ • SHA: 31998BA • UPD: 2026-10-06</text>
