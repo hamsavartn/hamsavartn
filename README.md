@@ -57,7 +57,7 @@ safety, and autonomous disturbance rejection under fault conditions.
     <td width="33%" valign="top">
       <h4><code>[0x03]</code> <a href="https://github.com/hamsavartn/rtos-edge-gateway"><strong>rtos-edge-gateway</strong></a></h4>
       <p><a href="https://github.com/hamsavartn/rtos-edge-gateway"><img src="https://img.shields.io/badge/FIRMWARE-STM32F103_0--HEAP-10B981?style=flat-square&amp;logo=arm&amp;logoColor=white" alt="STM32 FreeRTOS" /></a></p>
-      <p><sub><code>REG: 0x0800_0300</code> • <code>SHA: 0D31B00</code> • <code>2026-10-25</code></sub></p>
+      <p><sub><code>REG: 0x0800_0300</code> • <code>SHA: E4615DD</code> • <code>2026-10-25</code></sub></p>
       <p>RTOS-Based Industrial Edge Gateway | STM32F103C8 + FreeRTOS</p>
       <p><code>C++</code> <code>C</code> <code>FreeRTOS</code> <code>0-Heap</code></p>
     </td>
